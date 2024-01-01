@@ -31,3 +31,8 @@ const myFunction = function (){
 }
 
 console.log(typeof (outsideTemp) );
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive), Heep (Non-Primitive)
