@@ -1,28 +1,15 @@
 import React, { useState } from 'react'
 
-function App() {
- const [val, setVal] = useState([
-  {name: "Anish", age: 24}, 
-  {name: "Sivam", age: 25}, 
-  {name: "manish", age: 32},
-]);
-
+function Card() {
+  const [val, setVal] = useState(false);
   return (
     <div className='p-10 font-bold'>
-      {val.map(item => (
-        <div>
-      <h1>{item.name}</h1>
-      <h1>{item.age}</h1>
-      </div>
-      ))}
-      <button 
-       onClick={()=>setVal (() => val.map(item => item.name === "Anish" ? ({name: "Anish", age: 100 }) : item )) }
-       className="rounded-full px-5 py-1 bg-blue-600  text-white"
-      >
-         click
-      </button>
+     <h1>
+      {val === false ? "bahar jao" : "bahar mat jao"}
+     </h1>
+     <button onClick={() => setVal( ()=> !val) } className='px-2 py-1 bg-red-300 rounded-full'> click </button>
     </div>
   )
 }
 
-export default App
+export default Card
